@@ -23,7 +23,7 @@ const Dashboard = async () => {
   return (
     <div className="p-5">
       <div>
-        {tickets &&
+        {tickets ? (
           uniqueCategories?.map((uniqueCategory, categoryIndex) => (
             <div key={categoryIndex} className="my-4">
               <h2>{uniqueCategory}</h2>
@@ -39,7 +39,12 @@ const Dashboard = async () => {
                   ))}
               </div>
             </div>
-          ))}
+          ))
+        ) : (
+          <h2 className="text-default-text">
+            No Tickets Available. Please create a Ticket.
+          </h2>
+        )}
       </div>
     </div>
   );
