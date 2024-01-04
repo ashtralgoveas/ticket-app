@@ -35,9 +35,9 @@ const TicketForm = ({ ticket }) => {
 
   const [formData, setFormData] = useState(startingTicketData);
 
-  const handleRefresh = async () => {
-    router.refresh();
+  const handleRefresh = () => {
     router.push("/");
+    router.refresh();
   };
 
   const handleSubmit = async (e) => {
@@ -63,7 +63,7 @@ const TicketForm = ({ ticket }) => {
         throw new Error("Failed to create Ticket.");
       }
     }
-    await handleRefresh();
+    handleRefresh();
   };
 
   return (
