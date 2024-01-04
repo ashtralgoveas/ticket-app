@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/Ticket.js": {
+      "maxDuration": 30
+    }
+  }
+}
